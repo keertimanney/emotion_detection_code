@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<title>Face tracker</title>
+		<meta charset="utf-8">
+		<script>
+			// getUserMedia only works over https in Chrome 47+, so we redirect to https. Also notify user if running from file.
+			if (window.location.protocol == "file:") {
+				alert("You seem to be running this example directly from a file. Note that these examples only work when served from a server or localhost due to canvas cross-domain restrictions.");
+			} else if (window.location.hostname !== "localhost" && window.location.protocol !== "https:"){
+				window.location.protocol = "https";
+			}
+		</script>
+	</head>
+	<body>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.js"></script>
+		<div id="content">
+            <script src = "hacking_multiple_v2.js"></script>
+		</div>
+	</body>
+</html>
